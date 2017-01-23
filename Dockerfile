@@ -13,6 +13,8 @@ RUN \
       curl \
       xmlstarlet \
       uuid-runtime \
+      nfs-common \
+      inotify-tools \
     && \
 
 # Fetch and extract S6 overlay
@@ -45,6 +47,9 @@ ENV CHANGE_CONFIG_DIR_OWNERSHIP="true" \
 
 ARG TAG=plexpass
 ARG URL=
+
+ENV NFS_SERVER=$MASTER_IP \
+    NFS_MOUNTS=""
 
 COPY root/ /
 
