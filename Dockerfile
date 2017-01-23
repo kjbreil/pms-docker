@@ -13,8 +13,8 @@ RUN \
       curl \
       xmlstarlet \
       uuid-runtime \
-      nfs-common \
       inotify-tools \
+      nfs-common \
     && \
 
 # Fetch and extract S6 overlay

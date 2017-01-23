@@ -1,3 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-exec inotifywait -m `/nfs-mount-targets`
