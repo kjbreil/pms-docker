@@ -10,8 +10,8 @@ RUN \
 # Update and get dependencies
     apt-get update && \
     apt-get install -y \
-      curl \
       xmlstarlet \
+      curl \
       uuid-runtime \
       inotify-tools \
       nfs-common \
@@ -47,9 +47,6 @@ ENV CHANGE_CONFIG_DIR_OWNERSHIP="true" \
 
 ARG TAG=plexpass
 ARG URL=
-
-ENV NFS_SERVER=$MASTER_IP \
-    NFS_MOUNTS=""
 
 COPY root/ /
 
